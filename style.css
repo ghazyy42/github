@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: url(asset/bg1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.loginbox{
+position: relative;
+width: 400px;
+height: 450px;
+border: 2px solid rgba(255, 255, 255, 5);
+background: transparent;
+border-radius: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+backdrop-filter: blur(15px);;
+}
+
+h2{
+    font-size: 2em;
+    color: whitesmoke;
+    position: relative;
+    text-align: center;
+}
+
+.inputbox{
+    position: relative;
+    width: 310px;
+    margin: 30px;
+    border-bottom: 2px solid;
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: black;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.inputbox input:focus ~ label,
+.inputbox input:valid ~ label {
+    top: 5px ;
+}
+
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: white;
+    padding: 0 8px 0 5px;
+}
+
+.inputbox .icon{
+    right: 8px;
+    position: absolute;
+    color: black;
+    font-size: 1.2em;
+    line-height: 57px;   
+}
+
+.rememberforgot{
+    margin: -15px 0 15px;
+    color: white;
+    font-style :initial;
+    font-size: .-9em;
+    display: flex;
+    justify-content: space-between; 
+}
+
+.rememberforgot label input{
+    margin-right:auto;
+    margin-left: 23px;
+}
+.rememberforgot a {
+    color: white;
+    text-decoration: none;
+    margin-right: 23px;
+    margin-left: auto;
+}
+
+.rememberforgot a:hover {
+    text-decoration: underline;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    background: salmon;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+}
+
+button:hover{
+    background: rgb(252, 152, 141);
+    color: white;
+}
+
+button:active{
+    padding: 1rem 0.9375rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transform: translateY(1px);
+}
+
+.registerlink{
+    font-size: .9em;
+    color: white;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.registerlink p a{
+    color: wheat;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.registerlink p a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 360px) {
+    .loginbox{
+        width: 100%;
+        height: 100vh;
+        border: none;
+        border-radius: 0;
+    }
+    .inputbox{
+        width: 290px;
+    }
+    
+}
